@@ -24,6 +24,12 @@ export class Thermostat extends Component {
     };
   };
 
+  down = () => {
+    if(this.state.temperature > this.state.MINIMUM_TEMPERATURE){
+      this.setState({temperature: this.state.temperature - 1})
+    }
+  };
+
 
   render() {
 
@@ -39,7 +45,7 @@ export class Thermostat extends Component {
 
         <div className="controls">
           <button onClick={this.up}>+</button>
-          {/* <button onClick={}>-</button> */}
+          <button onClick={this.down}>-</button>
           {/* <button onClick={}>Reset</button> */}
           {/* <button onClick={}>Power Saving {powerSaving}</button> */}
         </div>
