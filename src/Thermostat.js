@@ -34,7 +34,10 @@ export class Thermostat extends Component {
   };
 
   togglePowerSaving = () => {
-    this.setState({powerSaving: !this.state.powerSaving})
+    this.setState({
+      powerSaving: !this.state.powerSaving,
+      maxTemp: !this.state.powerSaving ? this.PS_ON_MAX_TEMP : this.PS_OFF_MAX_TEMP
+    })
   };
 
   render() {
