@@ -33,9 +33,13 @@ export class Thermostat extends Component {
     this.setState({temperature: this.DEFAULT_TEMP})
   };
 
+  togglePowerSaving = () => {
+    this.setState({powerSaving: !this.state.powerSaving})
+  };
+
   render() {
 
-    let powerSaving = this.powerSaving ? 'On' : 'Off'
+    let powerSaving = this.state.powerSaving ? 'On' : 'Off'
 
     return (
       <div>
@@ -49,7 +53,7 @@ export class Thermostat extends Component {
           <button onClick={this.up}>+</button>
           <button onClick={this.down}>-</button>
           <button onClick={this.reset}>Reset</button>
-          {/* <button onClick={}>Power Saving {powerSaving}</button> */}
+          <button onClick={this.togglePowerSaving}>Power Saving {powerSaving}</button>
         </div>
 
         <h2>World Weather</h2>
