@@ -47,25 +47,14 @@ export class Thermostat extends Component {
     return (
       <div>
         <h1>Thermostat</h1>
-        <div id="temperature-wrapper">
-          <h2 id="temperature">{this.state.temperature}</h2>
-          <div id="sun" className="glow breathe"></div>
-        </div>
+        <h2>{this.state.temperature}</h2>
 
-        <div className="controls">
+        <div>
           <button onClick={this.up}>+</button>
           <button onClick={this.down}>-</button>
           <button onClick={this.reset}>Reset</button>
           <button onClick={this.togglePowerSaving}>Power Saving {powerSaving}</button>
         </div>
-
-        <h2>World Weather</h2>
-        <form id="select-city">
-          <input id='current-city' type='text' placeholder="Enter city" />
-          <input id="weather-submit" type='submit' value='Go' />
-        </form>
-        <h3 id="weather-report">Awaiting input...</h3>
-
       </div>
     )
   }
