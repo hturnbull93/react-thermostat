@@ -18,19 +18,22 @@ export class Thermostat extends Component {
 
 
   render() {
+
+    let powerSaving = this.powerSaving ? 'on' : 'off'
+
     return (
       <div>
         <h1>Thermostat</h1>
         <div id="temperature-wrapper">
-          <h2 id="temperature">20</h2>
+          <h2 id="temperature">{this.temperature}</h2>
           <div id="sun" className="glow breathe"></div>
         </div>
 
         <div className="controls">
-          <button id="up">+</button>
-          <button id="down">-</button>
-          <button id="reset">Reset</button>
-          <button id="toggle-power-saving">Power Saving <span id="power-saving"></span></button>
+          <button onClick={}>+</button>
+          <button onClick={}>-</button>
+          <button onClick={}>Reset</button>
+          <button onClick={}>Power Saving {powerSaving}</button>
         </div>
 
         <h2>World Weather</h2>
